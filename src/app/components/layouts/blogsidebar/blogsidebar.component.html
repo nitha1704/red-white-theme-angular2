@@ -1,0 +1,49 @@
+<div class="sidebar">
+    <!-- About Author Start -->
+    <div class="sidebar-widget widget-about-author">
+        <div class="widget-about-author-inner">
+            <div class="widget-about-author-bg" style="background-image: url({{author}})"></div>
+            <h5>About Me</h5>
+            <p>"Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit"</p>
+            <a routerLink="/">Johny Bora</a>
+        </div>
+    </div>
+    <!-- About Author End -->
+    <!-- Search Widget Start -->
+    <div class="sidebar-widget widget-search">
+        <h5 class="widget-title">Search</h5>
+        <form method="post">
+            <div class="sigma_search-adv-input">
+                <input type="text" class="form-control" placeholder="Search Posts" name="search" value="">
+                <button type="submit" name="button"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- Search Widget End -->
+    <!-- Categories Start -->
+    <div class="sidebar-widget">
+        <h5 class="widget-title"> Our Categories </h5>
+        <ul class="sidebar-widget-list">
+            <li *ngFor="let item of categoriespost"> 
+                <a routerLink="/blog-details"> {{item.title}} </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Categories End -->
+    <!-- Popular Tags Start -->
+    <div class="sidebar-widget">
+        <h5 class="widget-title">Popular Tags</h5>
+        <div class="tagcloud">
+            <a routerLink="/blog-details" *ngFor="let item of tagspost">{{item.tag}}</a>
+        </div>
+    </div>
+    <!-- Popular Tags End -->
+    <!-- Ad banner Start -->
+    <div class="sidebar-widget widget-ad p-0 border-0">
+        <img src="{{advimg}}" alt="ad">
+        <a href="https://www.youtube.com/watch?v=TKnufs85hXk" class="sigma_video-popup popup-youtube popup-lg">
+            <i class="far fa-play"></i>
+        </a>
+    </div>
+    <!-- Ad banner End -->
+</div>

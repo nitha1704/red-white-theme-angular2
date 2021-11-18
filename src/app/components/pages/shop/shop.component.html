@@ -1,0 +1,85 @@
+<app-breadcrumb></app-breadcrumb>
+<!-- Products Start -->
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Product Count & Orderby Start -->
+                <div class="sigma_shop-global">
+                    <p>Showing <b>20</b> of <b>320</b> products </p>
+                    <form method="post">
+                        <select class="form-control" name="orderby">
+                            <option value="default">Default sorting</option>
+                            <option value="latest">Latest release</option>
+                            <option value="price-down">Price: High - Low</option>
+                            <option value="price-up">Price: Low - High</option>
+                            <option value="popularity">Popularity Sorting</option>
+                        </select>
+                    </form>
+                </div>
+                <!-- Product Count & Orderby End -->
+                <div class="row masonry">
+                    <!-- Product Start -->
+                    <div class="col-sm-6 masonry-item" *ngFor="let item of shopblocks">
+                        <div class="sigma_product">
+                            <div class="sigma_product-badge sigma_badge-featured" *ngIf="item.tag">
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="sigma_product-thumb">
+                                <a routerLink="/product-single"><img src="{{item.img}}" alt=""></a>
+                            </div>
+                            <div class="sigma_product-body">
+                                <div class="sigma_rating-wrapper">
+                                    <div class="sigma_rating">
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star active"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <h5 class="sigma_product-title"> <a routerLink="/product-single">{{item.title}}</a> </h5>
+                                <div class="sigma_product-price">
+                                    <span>{{item.price}}$</span>
+                                    <span *ngIf="item.discountprice">{{item.discountprice}}$</span>
+                                </div>
+                                <p>{{item.text}}</p>
+                            </div>
+                            <div class="sigma_product-footer">
+                                <a routerLink="/product-single" class="sigma_btn-custom btn-sm">Buy Now</a>
+                                <div class="sigma_product-controls">
+                                    <a href="javascript:void(0)" placement="top" ngbTooltip="Wishlist"> <i class="far fa-heart"></i> </a>
+                                    <a href="javascript:void(0)" placement="top" ngbTooltip  ="Quick View"> <i class="far fa-eye" (click)="open(mymodal)"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product End -->
+                    <ng-template #mymodal let-modal>
+                        <div class="modal-body">
+                            <div class="close-btn close-dark close"  (click)="modal.dismiss('Cross click')">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <app-quickview></app-quickview>
+                        </div> 
+                    </ng-template>
+                </div>
+                <!-- Pagination Start -->
+                <app-pagination></app-pagination>
+                <!-- Pagination End -->
+            </div>
+            <!-- Sidebar Start -->
+            <div class="col-lg-4">
+                <app-shopsidebar></app-shopsidebar>
+            </div>
+            <!-- Sidebar End -->
+        </div>
+    </div>
+</div>
+<!-- Products End -->
+<!-- Clients Start -->
+<div class="section pt-0">
+    <app-clients></app-clients>
+</div>
+<!-- Clients End -->

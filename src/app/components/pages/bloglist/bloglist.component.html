@@ -1,0 +1,37 @@
+<app-breadcrumb></app-breadcrumb>
+<div class="section">
+    <div class="container">
+        <div class="section-title text-center">
+            <h4 class="title">Latest News & Blog</h4>
+        </div>
+        <!-- Article Start -->
+        <article class="sigma_post sigma_post-list" *ngFor="let item of bloglistpost">
+            <div class="row align-items-center">
+                <div class="col-lg-2">
+                    <a routerLink="/blog-details" class="sigma_post-date"> {{item.date}} <span>{{item.year}}</span> </a>
+                </div>
+                <div class="col-lg-8">
+                    <div class="sigma_post-body">
+                        <h5> <a routerLink="/blog-details">{{item.title}}</a> </h5>
+                        <div class="sigma_post-meta">
+                            <span class="sigma_post-author"> By: <a routerLink="/"> {{item.authorname}} </a> </span>
+                            <span><a routerLink="/"> {{item.tag}} </a> </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <a routerLink="/blog-details" class="sigma_btn-custom transparent">Read More</a>
+                </div>
+            </div>
+        </article>
+        <!-- Article End -->
+        <div class="section-button text-center">
+            <a routerLink="/" class="sigma_btn-custom">Load More</a>
+        </div>
+    </div>
+</div>
+<!-- Clients Start -->
+<div class="section pt-0">
+    <app-clients></app-clients>
+</div>
+<!-- Clients End -->

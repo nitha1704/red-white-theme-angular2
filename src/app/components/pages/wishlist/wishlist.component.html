@@ -1,0 +1,83 @@
+<app-breadcrumb></app-breadcrumb>
+<!-- Wishlist Start -->
+<div class="section">
+    <div class="container">
+        <!-- Wishlist Table Start -->
+        <table class="sigma_responsive-table">
+            <thead>
+                <tr>
+                    <th class="remove-item"></th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Availability</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of wishlisttable">
+                    <td class="remove">
+                        <button type="button" class="close-btn close-danger remove-from-cart">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </td>
+                    <td data-title="Product">
+                        <div class="sigma_cart-product-wrapper">
+                            <img src="{{item.img}}" alt="prod1">
+                            <div class="sigma_cart-product-body">
+                                <h6> <a routerLink="/shop">{{item.productname}}</a> </h6>
+                                <p>{{item.noofproduct}}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-title="Price"> <strong>{{item.price}}$</strong> </td>
+                    <td data-title="Availability">
+                        <span class="sigma_product-stock instock" *ngIf="item.instock">In Stock</span>
+                        <span class="sigma_product-stock outofstock" *ngIf="item.outstock">Out of Stock</span>
+                    </td>
+                    <td data-title="Total"> <strong>{{item.total}}$</strong> </td>
+                    <td data-title="Actions"> <a routerLink="/checkout" class="sigma_btn-custom btn-sm shadow-none">Add to Cart</a> </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Wishlist Table End -->
+        <!-- Share Wishlist Start -->
+        <div class="text-center">
+            <h5>Share Your Wishlist</h5>
+            <!-- Post Share Start -->
+            <div class="sigma_post-share">
+                <ul class="sigma_sm justify-content-center">
+                    <li>
+                        <a routerLink="/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Post Share End -->
+        </div>
+        <!-- Share Wishlist End -->
+    </div>
+</div>
+<!--  Wishlist End -->
+<!-- Clients Start -->
+<div class="section pt-0">
+    <app-clients></app-clients>
+</div>
+<!-- Clients End -->

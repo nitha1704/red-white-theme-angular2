@@ -1,0 +1,40 @@
+
+<div class="section section-padding">
+    <div class="container">
+        <div class="section-title flex-title">
+            <h4 class="title mb-lg-0">Favorite Projects</h4>
+            <div class="row text-center filter-items">
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <h5 class="active portfolio-trigger" data-filter="all">All</h5>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <h5 class="portfolio-trigger" data-filter="food">Food</h5>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <h5 class="portfolio-trigger" data-filter="design">Design</h5>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <h5 class="portfolio-trigger" data-filter="fitness">Fitness</h5>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-filter row">
+            <div class="filter-item col-lg-6 {{item.origin}}" *ngFor="let item of categoriespost">
+                <div class="sigma_portfolio-item">
+                    <img src="{{item.img}}" alt="">
+                    <div class="sigma_portfolio-item-content">
+                        <span>{{item.date}}</span>
+                        <div class="sigma_portfolio-item-content-inner">
+                            <a routerLink="/">{{item.category}}</a>
+                            <h5> <a routerLink="/project-details"> {{item.title}} </a> </h5>
+                        </div>
+                        <i class="fal fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-button text-center">
+            <a routerLink="/" class="sigma_btn-custom">Load More</a>
+        </div>
+    </div>
+</div>

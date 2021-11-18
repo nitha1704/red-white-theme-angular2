@@ -1,0 +1,119 @@
+<app-breadcrumb></app-breadcrumb>
+<!-- Icons Start -->
+<div class="section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-sm-6" *ngFor="let item of iconspost">
+                <div class="sigma_icon-block icon-block-2">
+                    <div class="sigma_icon-block-content">
+                        <h5>{{item.title}} <span>{{item.titlespan}}</span> </h5>
+                        <p>{{item.text}}</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <i class="flaticon-{{item.icon}}"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Icons End -->
+<!-- Team Start -->
+<section class="section section-padding pt-0">
+    <div class="container">
+        <div class="section-title">
+            <h4 class="title">Meet our team of professional creatives.</h4>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6" *ngFor="let item of teamblock">
+                <div class="sigma_team team-2">
+                    <div class="sigma_team-thumb">
+                        <img src="{{item.img}}" alt="">
+                    </div>
+                    <div class="sigma_team-body">
+                        <div class="sigma_team-info">
+                            <p>{{item.post}}</p>
+                            <h5>{{item.name}}</h5>
+                        </div>
+                        <div class="sigma_team-sm">
+                            <ul class="sigma_sm">
+                                <li> <a routerLink="/"> <i class="fab fa-facebook-f"></i> </a> </li>
+                                <li> <a routerLink="/"> <i class="fab fa-linkedin-in"></i> </a> </li>
+                                <li> <a routerLink="/"> <i class="fab fa-twitter"></i> </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team End -->
+<!-- Video Start -->
+<div class="section">
+    <div class="spacer spacer-xl dark-bg" style="background-image: url({{videobg}})"></div>
+    <div class="container">
+        <div class="section-title text-center">
+            <h4 class="title text-white">Do you have a project, we have creative solutions</h4>
+        </div>
+        <div class="col-lg-10 offset-lg-1">
+            <div class="sigma_video-popup-wrap">
+                <img src="{{videoposter}}" alt="">
+                <a href="https://www.youtube.com/watch?v=TKnufs85hXk" class="sigma_video-popup popup-youtube popup-lg">
+                    <i class="far fa-play"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Video End -->
+<!-- Testimonials Start -->
+<section class="section pt-0">
+    <div class="texture-2 d-none d-xl-block"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-lg-30">
+                <img src="{{testimonialsbg}}" alt="">
+            </div>
+            <div class="col-lg-6 testimonial-section">
+                <div class="mr-lg-30 section-title section-title-2">
+                    <h4 class="title">Our Clients Say</h4>
+                </div>
+                <div class="mr-lg-30 sigma_testimonial style-2">
+                    <ngx-slick-carousel class="sigma_testimonial-slider" #slickModal="slick-carousel" [config]="testimonialConfig">
+                        <div ngxSlickItem class="sigma_testimonial-inner" *ngFor="let item of testimonialpost">
+                            <div class="sigma_testimonial-body">
+                                <p>{{item.text}}</p>
+                            </div>
+                            <div class="sigma_testimonial-footer">
+                                <div class="sigma_testimonial-author">
+                                    <cite>{{item.name}}</cite>
+                                    <span>{{item.post}}</span>
+                                </div>
+                                <div class="sigma_rating-wrapper">
+                                    <div class="sigma_rating">
+                                        <i class="far fa-star active"></i>
+                                        <i class="far fa-star active"></i>
+                                        <i class="far fa-star active"></i>
+                                        <i class="far fa-star active"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ngx-slick-carousel>
+                </div>
+                <div class="mr-lg-30 sigma_arrows">
+                    <i class="far fa-chevron-left slick-arrow slider-prev"></i>
+                    <i class="far fa-chevron-right slick-arrow slider-next"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonials End -->
+<!-- Clients Start -->
+<div class="section pt-0">
+    <app-clients></app-clients>
+</div>
+<!-- Clients End -->

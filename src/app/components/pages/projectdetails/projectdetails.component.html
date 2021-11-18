@@ -1,0 +1,77 @@
+<app-breadcrumb></app-breadcrumb>
+<div class="section">
+    <div class="container">
+        <div class="entry-content">
+            <span>UI/UX & Interaction</span>
+            <h4 class="text-uppercase entry-title">Indoor Play Areas is simply dummy text</h4>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book.
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+            </p>
+            <div class="sigma_video-popup-wrap">
+                <img src="{{videoimage}}" alt="">
+                <a href="https://www.youtube.com/watch?v=TKnufs85hXk" class="sigma_video-popup popup-youtube popup-lg">
+                    <i class="far fa-play"></i>
+                </a>
+            </div>
+            <h5>Becoming a better version of you</h5>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book.
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+            </p>
+            <div class="row">
+                <div class="col-md-6" *ngFor="let item of smallgallery">
+                    <a href="{{item.img}}" class="gallery-thumb">
+                        <img src="{{item.img}}" alt="post">
+                    </a>
+                </div>
+            </div>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+                of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <a routerLink="/" class="h1 btn-link">Creative Direction</a>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+                        of Letraset sheets
+                        containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" *ngFor="let item of gallery">
+                    <a href="{{item.img}}" class="gallery-thumb">
+                        <img src="{{item.img}}" alt="post">
+                    </a>
+                </div>
+            </div>
+            <a href="{{projectimg}}" class="gallery-thumb">
+                <img src="{{projectimg}}" alt="post">
+            </a>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+                of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Clients Start -->
+<div class="section pt-0">
+    <app-clients></app-clients>
+</div>
+<!-- Clients End -->

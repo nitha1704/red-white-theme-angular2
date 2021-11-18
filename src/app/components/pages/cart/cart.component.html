@@ -1,0 +1,63 @@
+<app-breadcrumb></app-breadcrumb>
+<!--Cart Start -->
+<div class="section">
+    <div class="container">
+        <!-- Cart Table Start -->
+        <table class="sigma_responsive-table">
+            <thead>
+                <tr>
+                    <th class="remove-item"></th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Qunantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of cartlist">
+                    <td class="remove">
+                        <button type="button" class="close-btn close-danger remove-from-cart">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </td>
+                    <td data-title="Product">
+                        <div class="sigma_cart-product-wrapper">
+                            <img src="{{item.img}}" alt="">
+                            <div class="sigma_cart-product-body">
+                                <h6> <a routerLink="/">{{item.title}}</a> </h6>
+                                <p>{{item.qty}}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-title="Price"> <strong>{{item.price}}$</strong> </td>
+                    <td class="quantity" data-title="Quantity">
+                        <input type="number" class="qty form-control" value="1">
+                    </td>
+                    <td data-title="Total"> <strong>{{item.totalprice}}$</strong> </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Cart Table End -->
+        <!-- Coupon Code Start -->
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="form-group mb-0">
+                    <div class="input-group mb-0">
+                        <input type="text" class="form-control" placeholder="Enter Coupon Code" aria-label="Coupon Code">
+                        <div class="input-group-append">
+                            <button class="sigma_btn-custom shadow-none" type="button">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Coupon Code End -->
+    </div>
+</div>
+<!-- Cart End -->
+<!-- Clients Start -->
+<div class="section pt-0">
+    <app-clients></app-clients>
+</div>
+<!-- Clients End -->

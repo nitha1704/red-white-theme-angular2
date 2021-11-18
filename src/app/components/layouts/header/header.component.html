@@ -1,0 +1,53 @@
+<!-- Aside (Right Panel) -->
+<aside class="sigma_aside sigma_aside-right sigma_aside-right-panel sigma_aside-bg" [ngClass]="opencanvas ? '' : 'open'">
+    <app-canvas></app-canvas>
+</aside>
+<div class="sigma_aside-overlay aside-trigger-right" (click)="closeCanvas()"></div>
+<!-- Aside (Mobile Navigation) -->
+<aside class="sigma_aside sigma_aside-left" [ngClass]="opennav ? '' : 'open'">
+    <app-mobilemenu></app-mobilemenu>
+</aside>
+<div class="sigma_aside-overlay aside-trigger-left" (click)="closenavBtn()"></div>
+<!-- Header Start -->
+<header class="sigma_header header-1 can-sticky header-absolute header-light" id="header">
+    <!-- Middle Header Start -->
+    <div class="sigma_header-middle">
+        <div class="container-fluid">
+            <nav class="navbar">
+                <!-- Logo Start -->
+                <div class="sigma_logo-wrapper">
+                    <a class="navbar-brand" routerLink="/">
+                        <img src="{{logo}}" alt="">
+                    </a>
+                </div>
+                <!-- Logo End -->
+                <!-- Menu -->
+                <app-menu></app-menu>
+                <!-- Phone -->
+                <a class="d-none d-xl-block sigma_header-custom-link" href="tel:+123456789"> <i class="flaticon-call"></i> +123 456 789 </a>
+                <!-- Controls -->
+                <div class="sigma_header-controls style-2">
+                    <ul class="sigma_header-controls-inner">
+                        <!-- Desktop Toggler -->
+                        <li class="aside-toggler aside-trigger-right desktop-toggler" (click)="openCanvas()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </li>
+                        <!-- Mobile Toggler -->
+                        <li class="aside-toggler style-2 aside-trigger-left" (click)="opennavBtn()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Middle Header End -->
+</header>
+<!-- Header End -->

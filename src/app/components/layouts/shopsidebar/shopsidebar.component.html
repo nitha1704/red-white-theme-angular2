@@ -1,0 +1,73 @@
+<div class="sidebar">
+    <!-- Search Start -->
+    <div class="sidebar-widget widget-search">
+        <h6 class="widget-title">Search</h6>
+        <form method="post">
+            <div class="sigma_search-adv-input">
+                <input type="text" class="form-control" placeholder="Look for Products" name="search" value="">
+                <button type="submit" name="button"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!-- Search End -->
+    <!-- Filter: Categories Start -->
+    <div class="sidebar-widget">
+        <h5 class="widget-title"> Brand </h5>
+        <ul class="sidebar-widget-list">
+            <li *ngFor="let item of brandpost">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck{{item.id}}">
+                    <label class="custom-control-label" for="customCheck{{item.id}}">{{item.title}}</label>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- Filter: Categories End -->
+    <!-- Filter: State Start -->
+    <div class="sidebar-widget">
+        <h5 class="widget-title"> Category </h5>
+        <ul class="sidebar-widget-list">
+            <li *ngFor="let item of categorypost">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck{{item.id}}">
+                    <label class="custom-control-label" for="customCheck{{item.id}}">{{item.title}}</label>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- Filter: State End -->
+    <!-- Filter: Freshness Start -->
+    <div class="sidebar-widget">
+        <h5 class="widget-title"> Originality </h5>
+        <ng5-slider [(value)]="originvalue" [(highValue)]="originhighValue" [options]="originoptions"></ng5-slider>
+    </div>
+    <!-- Filter: Freshness End -->
+    <!-- Filter: Price Start -->
+    <div class="sidebar-widget">
+        <h5 class="widget-title"> Price </h5>
+        <ng5-slider [(value)]="pricevalue" [(highValue)]="pricehighValue" [options]="priceoptions"></ng5-slider>
+    </div>
+    <!-- Filter: Price End -->
+    <!-- Tags Start -->
+    <div class="sidebar-widget">
+        <h5 class="widget-title"> Popular Tags </h5>
+        <div class="tagcloud">
+            <a routerLink="/product-single" *ngFor="let item of shoptags">{{item.tag}}</a>
+        </div>
+    </div>
+    <!-- Tags End -->
+    <!-- Newsletter Start -->
+    <div class="sidebar-widget">
+        <div class="sigma_newsletter-form">
+            <h5>Join our newsletter</h5>
+            <p>Get exclusive weekly deals with our newsletter subscription</p>
+            <form method="post">
+                <div class="form-group">
+                    <input type="email" class="form-control" name="newsletter_email" placeholder="Email Address" value="">
+                </div>
+                <button type="submit" class="sigma_btn-custom secondary btn-block shadow-none" name="button">Join Newsletter</button>
+            </form>
+        </div>
+    </div>
+    <!-- Newsletter End -->
+</div>
